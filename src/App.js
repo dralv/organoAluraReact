@@ -32,7 +32,7 @@ function App() {
     },
     {
       nome: 'Mobile',
-      corPrimaria: '#FFBAD5',
+      corPrimaria: '#FFBA05',
       corSecundaria: '#FFF5D9'
     },
     {
@@ -52,14 +52,21 @@ function App() {
   return (
     <div>
       <Banner />
-      <Formulario times={times.map(time=>time.nome)}
+      <Formulario
+        times={times.map(time => time.nome)}
         aoColaboradorCadastrado={colaborador =>
           aoNovoColaboradorAdicionado(colaborador)
         }
       />
 
       {times.map(time => (
-        <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+          colaboradores={colaboradores.filter(colaborador=>colaborador.time==time.nome)}
+        ></Time>
       ))}
     </div>
   )
