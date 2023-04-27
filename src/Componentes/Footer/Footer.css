@@ -1,0 +1,23 @@
+.footer{
+  background-color: #6278f7;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 36px 0;
+  background-image: url("C:/Users/dralv/Documents/ALURA/FRONT END/organo/public/imagens/fundo.png");
+  background-size: contain;
+}
+
+.socialmedia{
+  display: flex;
+  justify-content: space-between;
+  width: 192px;
+}
+
+.socialmedia img{
+  width: 24px;
+}
+
+.footer p{
+  color: #fff;
+}
