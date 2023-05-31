@@ -1,8 +1,10 @@
+import {AiFillCloseCircle} from 'react-icons/ai/'
 import './Colaborador.css';
 
-const Colaborador = ({nome,imagem,cargo,cor})=>{
+const Colaborador = ({nome,imagem,cargo,cor,aoDeletar})=>{
   return(
     <div className='colaborador'>
+      <AiFillCloseCircle size={25} className='deletar' onClick={aoDeletar}/>
       <div className='cabecalho' style={{backgroundColor:cor}}>
         <img src={imagem} alt={nome}></img>
       </div>
@@ -13,5 +15,6 @@ const Colaborador = ({nome,imagem,cargo,cor})=>{
     </div>
   )
 }
+
 
 export default Colaborador
